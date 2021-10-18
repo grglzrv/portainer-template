@@ -334,6 +334,54 @@
     },
     {
       "type": 1,
+      "title": "Plex",
+      "name": "plex",
+      "note": "Portainer App Templates by <a href='https://lazaroff.pro' target='_blank'>George Lazaroff</a>, <p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/plex/config</p>, <p>mkdir -p /volume1/plex/data/tv</p>, <p>mkdir -p /volume1/plex/data/movies</p>",
+      "description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/plex-icon.png",
+      "image": "linuxserver/plex:latest",
+      "categories": [
+        "Video",
+        "Music",
+        "Photos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "network": "host",
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/plex/config"
+        },
+        {
+          "container": "/tv",
+          "bind": "/volume1/plex/data/tv"
+        },
+        {
+          "container": "/movies",
+          "bind": "/volume1/plex/data/movies"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "1000"
+        },
+        {
+          "name": "VERSION",
+          "label": "VERSION",
+          "set": "latest"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "Beets",
       "name": "Beets",
       "note": "Portainer App Templates by <a href='https://lazaroff.pro' target='_blank'>George Lazaroff</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/beets/config<br>mkdir -p /volume1/docker/beets/music<br>mkdir -p /volume1/docker/beets/downloads</p>",
