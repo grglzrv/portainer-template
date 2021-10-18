@@ -4595,9 +4595,8 @@
       "type": 1,
       "title": "Homer",
       "name": "homer",
-      "note": "Portainer App Templates by <a href='https://lazaroff.pro' target='_blank'>George Lazaroff</a>, A dead simple static Home page for your server to keep your services on hand, from a simple yaml configuration file.",
+      "note": "Portainer App Templates by <a href='https://lazaroff.pro' target='_blank'>George Lazaroff</a>, A dead simple static Home page for your server to keep your services on hand, from a simple yaml configuration file. This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
       "description": "A dead simple static Home page for your server to keep your services on hand, from a simple yaml configuration file.",
-      "note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/homer.png",
       "image": "b4bz/homer:latest",
       "categories": [
