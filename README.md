@@ -1,1 +1,1 @@
-# portainer-template
+# portainer-templates
